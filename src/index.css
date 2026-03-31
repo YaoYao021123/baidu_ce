@@ -1,0 +1,47 @@
+@import "tailwindcss";
+
+/* 低饱和度配色系统 */
+:root {
+  /* 主色调 */
+  --color-primary: #3d5a9e;
+  --color-primary-light: #5a73b3;
+  --color-primary-dark: #2d4578;
+  
+  /* 辅助色 */
+  --color-secondary: #6b5b95;
+  --color-accent: #4a90a4;
+  
+  /* 表面色 */
+  --color-background: #f5f6f8;
+  --color-surface-1: #ffffff;
+  --color-surface-2: #f0f1f3;
+  --color-surface-3: #e8e9ec;
+  
+  /* 文字色 */
+  --color-on-surface: #2c3e50;
+  --color-on-surface-variant: #5a6978;
+  --color-on-surface-dim: #8b95a1;
+  
+  /* 语义色 */
+  --color-success: #5a9a7c;
+  --color-warning: #c9a227;
+  --color-error: #c75b5b;
+}
+
+/* 自定义 Tailwind 颜色类 */
+@theme {
+  --color-primary: #3d5a9e;
+  --color-primary-light: #5a73b3;
+  --color-primary-dark: #2d4578;
+  --color-secondary: #6b5b95;
+  --color-accent: #4a90a4;
+  --color-surface-1: #ffffff;
+  --color-surface-2: #f0f1f3;
+  --color-surface-3: #e8e9ec;
+  --color-on-surface: #2c3e50;
+  --color-on-surface-variant: #5a6978;
+  --color-on-surface-dim: #8b95a1;
+  --color-success: #5a9a7c;
+  --color-warning: #c9a227;
+  --color-error: #c75b5b;
+}
