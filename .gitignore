@@ -3,4 +3,8 @@ build/
 dist/
 coverage/
 .DS_Store
+.vercel
+.env
+.env.local
+.env.*.local
 *.log

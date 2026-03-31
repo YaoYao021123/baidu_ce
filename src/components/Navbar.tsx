@@ -14,6 +14,7 @@ export default function Navbar() {
   }, []);
 
   const navItems = [
+    { label: '主推产品', href: '#主推产品' },
     { label: '产品能力', href: '#产品能力' },
     { label: '技术路线', href: '#技术路线' },
     { label: '解决方案', href: '#解决方案' },
@@ -55,12 +56,20 @@ export default function Navbar() {
 
           {/* Desktop CTA */}
           <div className="hidden md:flex items-center space-x-4">
-            <button className="text-sm font-medium text-on-surface-variant hover:text-primary transition-colors">
+            <a
+              href="https://console.bce.baidu.com/"
+              target="_blank"
+              rel="noreferrer"
+              className="text-sm font-medium text-on-surface-variant hover:text-primary transition-colors"
+            >
               登录
-            </button>
-            <button className="bg-primary hover:bg-primary-dark text-white px-5 py-2 rounded-lg text-sm font-medium transition-colors">
+            </a>
+            <a
+              href="#生态合作"
+              className="bg-primary hover:bg-primary-dark text-white px-5 py-2 rounded-lg text-sm font-medium transition-colors"
+            >
               联系销售
-            </button>
+            </a>
           </div>
 
           {/* Mobile Menu Button */}
@@ -86,9 +95,9 @@ export default function Navbar() {
               </a>
             ))}
             <div className="px-4 pt-4 border-t border-surface-3 mt-2">
-              <button className="w-full bg-primary text-white py-3 rounded-lg font-medium">
+              <a href="#生态合作" className="block w-full bg-primary text-white py-3 rounded-lg font-medium text-center">
                 联系销售
-              </button>
+              </a>
             </div>
           </div>
         )}

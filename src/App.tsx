@@ -5,6 +5,7 @@
 
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
+import FeaturedProducts from './components/FeaturedProducts';
 import Stats from './components/Stats';
 import InteractionEvolution from './components/InteractionEvolution';
 import PainPoints from './components/PainPoints';
@@ -21,6 +22,7 @@ export default function App() {
     <div className="min-h-screen bg-surface-1">
       <Navbar />
       <Hero />
+      <FeaturedProducts />
       <Stats />
       <InteractionEvolution />
       <PainPoints />

@@ -35,13 +35,19 @@ export default function Hero() {
           </p>
           
           <div className="flex flex-col sm:flex-row justify-center gap-4 mb-16">
-            <button className="bg-primary hover:bg-primary-dark text-white px-8 py-4 rounded-lg text-lg font-medium transition-all flex items-center justify-center group">
+            <a
+              href="#主推产品"
+              className="bg-primary hover:bg-primary-dark text-white px-8 py-4 rounded-lg text-lg font-medium transition-all flex items-center justify-center group"
+            >
               立即体验方案
               <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
-            </button>
-            <button className="bg-surface-1 hover:bg-white text-on-surface border border-surface-3 px-8 py-4 rounded-lg text-lg font-medium transition-all shadow-sm">
+            </a>
+            <a
+              href="#生态合作"
+              className="bg-surface-1 hover:bg-white text-on-surface border border-surface-3 px-8 py-4 rounded-lg text-lg font-medium transition-all shadow-sm"
+            >
               获取行业白皮书
-            </button>
+            </a>
           </div>
         </motion.div>
 
