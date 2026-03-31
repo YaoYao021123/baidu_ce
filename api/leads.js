@@ -3,7 +3,11 @@ import { Resend } from 'resend';
 
 const requiredFields = ['name', 'phone', 'email', 'companyName', 'requirement'];
 
-const connectionString = process.env.DATABASE_URL;
+const connectionString =
+  process.env.DATABASE_URL ||
+  process.env.POSTGRES_URL ||
+  process.env.POSTGRES_PRISMA_URL ||
+  process.env.POSTGRES_URL_NON_POOLING;
 const notifyEmail = process.env.CONTACT_NOTIFY_EMAIL || 'yaoyao17@baidu.com';
 const resendFromEmail = process.env.RESEND_FROM_EMAIL || 'onboarding@resend.dev';
 
@@ -20,7 +24,7 @@ function escapeHtml(value) {
 
 function getPool() {
   if (!connectionString) {
-    throw new Error('DATABASE_URL is not configured');
+    throw new Error('DATABASE_URL / POSTGRES_URL is not configured');
   }
 
   if (!pool) {
@@ -160,7 +164,7 @@ export default async function handler(req, res) {
     });
   } catch (error) {
     const message = error instanceof Error ? error.message : '服务器处理失败';
-    const status = message === 'DATABASE_URL is not configured' ? 500 : 400;
+    const status = message === 'DATABASE_URL / POSTGRES_URL is not configured' ? 500 : 400;
     res.status(status).json({ message });
   }
 }

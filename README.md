@@ -28,7 +28,7 @@
 
 需要在 Vercel 项目中配置以下环境变量，可参考 [`.env.example`](/Users/yaoyao/code/baidu/html_ppt/src/.env.example)：
 
-- `DATABASE_URL`
+- `DATABASE_URL` 或 `POSTGRES_URL`
 - `RESEND_API_KEY`
 - `RESEND_FROM_EMAIL`
 - `CONTACT_NOTIFY_EMAIL`，默认会回退到 `yaoyao17@baidu.com`
